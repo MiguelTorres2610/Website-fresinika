@@ -44,20 +44,16 @@ export function Menu() {
         </motion.p>
       </section>
 
-      {/* Categories */}
+      {/* Categorías */}
       <section className="py-6 md:py-8 px-4 bg-white sticky top-16 md:top-20 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-2 md:gap-3 overflow-x-auto pb-2 scrollbar-hide">
             <button
               onClick={() => setSelectedCategory(null)}
-              className={`px-4 md:px-6 py-2 md:py-3 rounded-full whitespace-nowrap transition-all flex-shrink-0 ${
-                selectedCategory === null
-                  ? 'text-white shadow-md'
-                  : 'border-2 hover:scale-105'
-              }`}
+              className="px-4 md:px-6 py-2 md:py-3 rounded-full whitespace-nowrap transition-all flex-shrink-0 border-2"
               style={{
                 backgroundColor: selectedCategory === null ? 'var(--strawberry-red)' : 'white',
-                borderColor: selectedCategory === null ? 'transparent' : 'var(--strawberry-red)',
+                borderColor: 'var(--strawberry-red)',
                 color: selectedCategory === null ? 'white' : 'var(--strawberry-red)',
               }}
             >
@@ -68,14 +64,10 @@ export function Menu() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 md:px-6 py-2 md:py-3 rounded-full whitespace-nowrap transition-all flex-shrink-0 ${
-                  selectedCategory === category.id
-                    ? 'text-white shadow-md'
-                    : 'border-2 hover:scale-105'
-                }`}
+                className="px-4 md:px-6 py-2 md:py-3 rounded-full whitespace-nowrap transition-all flex-shrink-0 border-2"
                 style={{
                   backgroundColor: selectedCategory === category.id ? 'var(--strawberry-red)' : 'white',
-                  borderColor: selectedCategory === category.id ? 'transparent' : 'var(--strawberry-red)',
+                  borderColor: 'var(--strawberry-red)',
                   color: selectedCategory === category.id ? 'white' : 'var(--strawberry-red)',
                 }}
               >
@@ -87,7 +79,7 @@ export function Menu() {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Grid de Productos - Ajustado el gap para móvil */}
       <section className="py-8 md:py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {selectedCategory && (
@@ -102,48 +94,37 @@ export function Menu() {
           )}
 
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
+            <div className="text-center py-16 text-gray-400">
               <div className="text-6xl mb-4">😕</div>
-              <p className="text-gray-600 text-lg">
-                No hay productos en esta categoría
-              </p>
+              <p className="text-lg">No hay productos en esta categoría</p>
             </div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section 
-        className="py-12 md:py-16 px-4"
-        style={{ backgroundColor: 'var(--cream)' }}
-      >
+      <section className="py-12 md:py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 
-            className="text-2xl md:text-3xl font-bold mb-4"
-            style={{ color: 'var(--strawberry-red)' }}
-          >
+          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: 'var(--strawberry-red)' }}>
             ¿No encuentras lo que buscas?
           </h2>
           <p className="text-gray-600 text-base md:text-lg mb-6">
             Contáctanos por WhatsApp y armamos algo especial para ti
           </p>
-          <button
-            onClick={() => {
-              const phoneNumber = "50588888888";
-              const message = encodeURIComponent("¡Hola! Quisiera hacer una consulta sobre el menú 🍓");
-              window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-            }}
-            className="px-8 md:px-10 py-3 md:py-4 rounded-full text-white text-base md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://wa.me/50582567321')}
+            className="px-8 md:px-10 py-3 md:py-4 rounded-full text-white font-semibold shadow-lg transition-all"
             style={{ backgroundColor: '#25D366' }}
           >
             Contactar por WhatsApp
-          </button>
+          </motion.button>
         </div>
       </section>
     </div>
