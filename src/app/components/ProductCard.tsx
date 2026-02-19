@@ -1,73 +1,68 @@
-import { Link } from "react-router";
+import { motion } from "motion/react";
 import { ShoppingCart } from "lucide-react";
-import type { Product } from "@/app/data/products";
 
-interface ProductCardProps {
-  product: Product;
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
-  const whatsappOrder = () => {
+export function ProductCard({ product }: { product: Product }) {
+  const handleOrder = () => {
     const phoneNumber = "50588888888";
-    const message = encodeURIComponent(
-      `¡Hola! Me gustaría pedir: ${product.name} - C$${product.price}`
-    );
+    const message = encodeURIComponent(`¡Hola! Me gustaría pedir: ${product.name} (C$${product.price}) 🍓`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   return (
-    <div className="group bg-white rounded-2xl shadow-sm hover:shadow-strawberry transition-all duration-300 overflow-hidden">
-      <Link to={`/producto/${product.id}`} className="block relative">
-        {/* Badge */}
-        {product.badge && (
-          <div
-            className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs text-white z-10 shadow-md"
-            style={{
-              backgroundColor:
-                product.badge === 'Promo' ? 'var(--tropical-green)' :
-                product.badge === 'Nuevo' ? 'var(--strawberry-pink)' :
-                'var(--strawberry-red)',
-            }}
-          >
-            {product.badge}
-          </div>
-        )}
+    <motion.div 
+      layout
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      whileHover={{ y: -5 }}
+      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full transition-shadow hover:shadow-md"
+    >
+      {/* Imagen del Postre */}
+      <div className="relative h-32 md:h-48 overflow-hidden">
+        <img 
+          src={product.image} 
+          alt={product.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-        {/* Image */}
-        <div className="aspect-square overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-          />
-        </div>
-      </Link>
-
-      {/* Content */}
-      <div className="p-4">
-        <Link to={`/producto/${product.id}`}>
-          <h3 className="font-semibold text-lg mb-1 line-clamp-1 group-hover:text-[var(--strawberry-red)] transition-colors">
-            {product.name}
-          </h3>
-        </Link>
-        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+      {/* Información */}
+      <div className="p-3 md:p-4 flex flex-col flex-grow">
+        <h3 className="font-bold text-gray-800 text-sm md:text-base mb-1 line-clamp-1">
+          {product.name}
+        </h3>
+        <p className="text-gray-500 text-[10px] md:text-sm mb-3 line-clamp-2 leading-tight">
           {product.description}
         </p>
 
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold price" style={{ color: 'var(--strawberry-red)' }}>
+        {/* Precio y Botón (Responsivo) */}
+        <div className="mt-auto flex items-center justify-between gap-1">
+          <span className="font-bold text-sm md:text-lg" style={{ color: 'var(--strawberry-red)' }}>
             C${product.price}
-          </div>
-          <button
-            onClick={whatsappOrder}
-            className="px-4 py-2 rounded-full text-white transition-all hover:scale-105 flex items-center gap-2 text-sm"
+          </span>
+          
+          <motion.button 
+            whileTap={{ scale: 0.85 }} 
+            whileHover={{ scale: 1.05 }}
+            onClick={handleOrder}
+            className="flex items-center justify-center gap-2 text-white p-2 md:px-4 md:py-2 rounded-xl shadow-sm"
             style={{ backgroundColor: 'var(--strawberry-red)' }}
           >
-            <ShoppingCart size={16} />
-            <span>Pedir</span>
-          </button>
+            <ShoppingCart size={18} />
+            {/* Oculto en móvil, visible en escritorio */}
+            <span className="hidden md:inline font-semibold text-sm">
+              Pedir
+            </span>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

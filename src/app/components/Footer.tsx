@@ -53,8 +53,8 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>Managua, Nicaragua</li>
-              <li>+505 8888 8888</li>
-              <li>info@fresinika.com</li>
+              <li>+505 8256 7321</li>
+              <li>Fresinikanic@gmail.com</li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://facebook.com/fresinika"
+                href="https://www.facebook.com/profile.php?id=61550901849196"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors"

@@ -204,7 +204,7 @@ export function Reviews() {
           </p>
           <button
             onClick={() => {
-              const phoneNumber = "50588888888";
+              const phoneNumber = "50582567321";
               const message = encodeURIComponent("¡Hola! Me gustaría compartir mi opinión sobre Fresinika 🍓⭐");
               window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
             }}

@@ -2,7 +2,7 @@ import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 
 export function Location() {
   const contactWhatsApp = () => {
-    const phoneNumber = "50588888888";
+    const phoneNumber = "50582567321";
     const message = encodeURIComponent("¡Hola! Quisiera información sobre ubicación y horarios 🍓");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -87,7 +87,7 @@ export function Location() {
               Teléfono
             </h3>
             <p className="text-gray-700 text-lg md:text-xl mb-4">
-              +505 8888 8888
+              +505 8256 7321
             </p>
             <button
               onClick={contactWhatsApp}
@@ -95,7 +95,7 @@ export function Location() {
               style={{ backgroundColor: '#25D366' }}
             >
               Contactar por WhatsApp
-            </button>
+            </button> 
           </div>
 
           {/* Delivery */}
@@ -133,7 +133,7 @@ export function Location() {
             style={{ backgroundColor: 'var(--cream)' }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125033.04932346828!2d-86.35087854999999!3d12.114992899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73f87cb2d177a1%3A0x4e1e2faa718c4aa0!2sManagua%2C%20Nicaragua!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              src="https://www.google.com/maps/d/u/0/embed?mid=10-1jfsHUpej7lijb3RLabLSBtKgn3t8&ehbc=2E312F&noprof=1"
               width="100%"
               height="100%"
               style={{ border: 0 }}
