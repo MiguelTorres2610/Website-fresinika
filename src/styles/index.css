@@ -1,7 +1,6 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
-
+@import "tailwindcss";
+@import "./fonts.css";
+@import "./theme.css";
 /* Custom utility classes for Fresinika */
 .scrollbar-hide {
   -ms-overflow-style: none;
