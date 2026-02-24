@@ -10,7 +10,7 @@ export function Home() {
   const featuredProducts = products.filter(p => p.badge === 'Más vendido').slice(0, 4);
 
   const orderWhatsApp = () => {
-    const phoneNumber = "50588888888";
+    const phoneNumber = "50582567321";
     const message = encodeURIComponent("¡Hola! Me gustaría hacer un pedido 🍓");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };

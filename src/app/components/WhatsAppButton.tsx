@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 export function WhatsAppButton() {
-  const phoneNumber = "50588888888"; // Placeholder
+  const phoneNumber = "50582567321"; // Placeholder
   const message = encodeURIComponent("¡Hola! Me gustaría hacer un pedido de Fresinika 🍓");
 
   return (

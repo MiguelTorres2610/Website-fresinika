@@ -26,7 +26,7 @@ export function ProductDetail() {
   }
 
   const whatsappOrder = () => {
-    const phoneNumber = "50588888888";
+    const phoneNumber = "50582567321";
     const message = encodeURIComponent(
       `¡Hola! Me gustaría pedir:\n${product.name}\nPrecio: C$${product.price}`
     );

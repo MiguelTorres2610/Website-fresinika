@@ -11,7 +11,7 @@ interface Product {
 
 export function ProductCard({ product }: { product: Product }) {
   const handleOrder = () => {
-    const phoneNumber = "50588888888";
+    const phoneNumber = "50582567321";
     const message = encodeURIComponent(`¡Hola! Me gustaría pedir: ${product.name} (C$${product.price}) 🍓`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -65,4 +65,4 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
     </motion.div>
   );
-}
+}3
