@@ -1,3 +1,8 @@
+import fresinikaClasica from '../../assets/fresanika_original.jpeg';
+import fresinikaHawaiano from '../../assets/hawai.jpeg';
+import fresasChocolate from '../../assets/fresas_chocolate.jpeg';
+import fresasCrema from '../../assets/fresas_crema.webp';
+
 export interface Product {
   id: string;
   name: string;
@@ -14,47 +19,47 @@ export const products: Product[] = [
   // Clásicos
   {
     id: 'fresa-clasica',
-    name: 'Fresas con Crema Clásica',
-    description: 'Fresas frescas con nuestra deliciosa crema artesanal',
-    price: 80,
-    image: 'https://images.unsplash.com/photo-1723437496824-a73ed350558b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhd2JlcnJpZXMlMjBjcmVhbSUyMGRlc3NlcnR8ZW58MXx8fHwxNzcwMDA4NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    name: 'Fresinika original(s/toppings)',
+    description: 'Fresas, crema, leche condensada o chocolate',
+    price: 200,
+    image: fresinikaClasica,
     category: 'clasicos',
     badge: 'Más vendido',
     flavors: ['Natural', 'Con azúcar', 'Sin azúcar'],
   },
   {
     id: 'fresa-premium',
-    name: 'Fresas Premium',
+    name: 'Fresa/crema de vainilla +3 toppings',
     description: 'Fresas extra grandes con crema batida y toppings especiales',
-    price: 110,
-    image: 'https://images.unsplash.com/photo-1561282236-fb65a135d81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHN0cmF3YmVycmllcyUyMGJvd2x8ZW58MXx8fHwxNzcwMDA4NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    price: 240,
+    image: fresasCrema,
     category: 'clasicos',
   },
   {
-    id: 'yogurt-fresa',
+    id: 'Chocofresas',
     name: 'Yogurt con Fresas',
-    description: 'Yogurt natural con fresas frescas y granola',
-    price: 85,
-    image: 'https://images.unsplash.com/photo-1590085345642-cc15c79a9607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJlcnJpZXMlMjB5b2d1cnR8ZW58MXx8fHwxNzcwMDA4NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    description: 'Nutella, crema de chocolate, fresas frescas, chocolate chips, leche en polvo.',
+    price: 345,
+    image: fresasChocolate,
     category: 'clasicos',
   },
 
   // Tropicales
   {
     id: 'tropical-mix',
-    name: 'Mix Tropical',
-    description: 'Fresas con piña, mango, papaya y crema',
-    price: 95,
-    image: 'https://images.unsplash.com/photo-1564956213070-84f5a0cb2407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGZydWl0JTIwc21vb3RoaWV8ZW58MXx8fHwxNzY5OTMwNjM4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    name: 'Mixto de fresas y duraznos + 2 toppings',
+    description: 'Con dos toppings de su elección',
+    price: 259,
+    image: fresinikaHawaiano,
     category: 'tropicales',
     badge: 'Más vendido',
   },
   {
     id: 'pina-colada',
-    name: 'Piña Colada con Fresas',
-    description: 'Fresas con piña, coco rallado y crema especial',
-    price: 100,
-    image: 'https://images.unsplash.com/photo-1707588435406-74ef5f056e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcnVpdCUyMHBhcmZhaXQlMjBkZXNzZXJ0fGVufDF8fHx8MTc3MDAwODYxNnww&ixlib=rb-4.1.0&q=80&w=1080',
+    name: 'Fresinika Hawaiano',
+    description: 'Fresinika Hawaiano con piña, coco, crema de vainilla y leche condensada',
+    price: 259,
+    image: fresinikaHawaiano,
     category: 'tropicales',
     badge: 'Nuevo',
   },
@@ -62,10 +67,10 @@ export const products: Product[] = [
   // Especiales
   {
     id: 'chocolate-dream',
-    name: 'Chocolate Dream',
-    description: 'Fresas con crema, chocolate derretido y chispas',
-    price: 115,
-    image: 'https://images.unsplash.com/photo-1663525572640-ce318c497a9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhd2JlcnJ5JTIwZGVzc2VydCUyMGN1cHxlbnwxfHx8fDE3NzAwMDg2MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    name: 'Fresa con crema de vainilla + 5 toppings',
+    description: 'Fresa con crema de vainilla + 5 toppings',
+    price: 259,
+    image: fresasChocolate,
     category: 'especiales',
     badge: 'Nuevo',
   },
@@ -74,7 +79,7 @@ export const products: Product[] = [
     name: 'Cookies & Cream',
     description: 'Fresas con crema y galletas Oreo trituradas',
     price: 105,
-    image: 'https://images.unsplash.com/photo-1723437496824-a73ed350558b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhd2JlcnJpZXMlMjBjcmVhbSUyMGRlc3NlcnR8ZW58MXx8fHwxNzcwMDA4NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: fresasCrema,
     category: 'especiales',
   },
 
@@ -84,7 +89,7 @@ export const products: Product[] = [
     name: 'Combo Dúo',
     description: '2 vasos clásicos para compartir',
     price: 145,
-    image: 'https://images.unsplash.com/photo-1561282236-fb65a135d81f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHN0cmF3YmVycmllcyUyMGJvd2x8ZW58MXx8fHwxNzcwMDA4NjE1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: fresinikaClasica,
     category: 'combos',
     badge: 'Promo',
   },
@@ -93,7 +98,7 @@ export const products: Product[] = [
     name: 'Combo Familiar',
     description: '4 vasos a elegir + 1 litro de jugo natural',
     price: 340,
-    image: 'https://images.unsplash.com/photo-1590085345642-cc15c79a9607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJlcnJpZXMlMjB5b2d1cnR8ZW58MXx8fHwxNzcwMDA4NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: fresinikaClasica,
     category: 'combos',
     badge: 'Promo',
   },
@@ -104,7 +109,7 @@ export const products: Product[] = [
     name: 'Promo de la Semana',
     description: 'Fresa tropical con 20% de descuento',
     price: 76,
-    image: 'https://images.unsplash.com/photo-1564956213070-84f5a0cb2407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGZydWl0JTIwc21vb3RoaWV8ZW58MXx8fHwxNzY5OTMwNjM4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: fresinikaHawaiano,
     category: 'promociones',
     badge: 'Promo',
   },
