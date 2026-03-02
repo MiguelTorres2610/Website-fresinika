@@ -3,7 +3,7 @@ import { Star, ThumbsUp, Instagram } from "lucide-react";
 const reviews = [
   {
     id: 1,
-    name: "María González",
+    name: "Kevin Torrez",
     rating: 5,
     comment: "¡Las mejores fresas con crema de Managua! Súper frescas y la porción es generosa. 100% recomendado 🍓❤️",
     date: "Hace 2 días",
@@ -11,7 +11,7 @@ const reviews = [
   },
   {
     id: 2,
-    name: "Carlos Martínez",
+    name: "Gamaliel Davila",
     rating: 5,
     comment: "El mix tropical es una delicia! Perfecto para estos días calurosos. La entrega fue rápida y todo llegó perfecto.",
     date: "Hace 5 días",
@@ -19,7 +19,7 @@ const reviews = [
   },
   {
     id: 3,
-    name: "Andrea López",
+    name: "Kevin Chavez",
     rating: 5,
     comment: "Me encanta que usen fresas frescas y de calidad. El servicio al cliente es excelente, siempre atentos ✨",
     date: "Hace 1 semana",

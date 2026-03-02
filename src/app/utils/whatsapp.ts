@@ -1,6 +1,6 @@
 // WhatsApp configuration and utility functions
 export const WHATSAPP_CONFIG = {
-  phoneNumber: "50588888888", // Placeholder phone number
+  phoneNumber: "50582567321", // Placeholder phone number
   businessName: "Fresinika",
 };
 

@@ -247,7 +247,7 @@ export function About() {
           </p>
           <button
             onClick={() => {
-              const phoneNumber = "50588888888";
+              const phoneNumber = "50582567321";
               const message = encodeURIComponent("¡Hola! Me gustaría hacer mi primer pedido 🍓");
               window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
             }}
